@@ -1,0 +1,14 @@
+.cell{
+    height:75px;
+    width:75px;
+    border:2px solid black;
+    font-size:50px;
+
+}
+
+#container{
+    display:grid;
+    grid-template-columns: repeat(3,auto);
+    width: 225px;
+    height:225px;
+}
