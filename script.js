@@ -33,20 +33,26 @@ document.querySelectorAll("cell")
 function updategameBoard1(){
   cell1=document.getElementById("0")
   cell1.innerHTML=currentPlayer;
-
+  gameGrid.splice(0,0,currentPlayer)
+  console.log(gameGrid)
 }
 function updategameBoard2(){
   cell2=document.getElementById("1")
   cell2.innerHTML=currentPlayer;
+  gameGrid.splice(1,0,currentPlayer)
+  console.log(gameGrid)
 
 }
 function updategameBoard3(){
   cell3=document.getElementById("2")
   cell3.innerHTML=currentPlayer;
+  gameGrid.splice(2,0,currentPlayer)
+  console.log(gameGrid)
 }
 function updategameBoard4(){
   cell4=document.getElementById("3")
   cell4.innerHTML=currentPlayer;
+  gameGrid.splice([1][0],0,currentPlayer)
 
 }
 function updategameBoard5(){
