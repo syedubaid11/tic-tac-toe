@@ -34,18 +34,24 @@ let gameboard={
 console.log(gameboard)
 
 
+function changePlayer(){
+  if (currentPlayer==="X"){
+    currentPlayer="O";
+  }
+  else{
+    currentPlayer="X";
+  }
+}
+
 document.querySelectorAll("cell")
 
 function updategameBoard1(){
   cell1=document.getElementById("0")
   cell1.innerHTML=currentPlayer;
-  //inserting the value of X into gameGrid
-  //splice(index,0=insert,1=replace,value) 
-  if(currentPlayer="X"){
+  if(currentPlayer==="X"){
     gameGrid.splice(0,1,1)
     console.log(gameGrid)
   }
-  //inserting the value of 0 into gameGrid2
   else{
     gameGrid2.splice(0,1,0)
     console.log(gameGrid2)
@@ -56,7 +62,7 @@ function updategameBoard1(){
 function updategameBoard2(){
   cell2=document.getElementById("1")
   cell2.innerHTML=currentPlayer;
-  if(currentPlayer="X"){
+  if(currentPlayer==="X"){
     gameGrid.splice(1,1,1)
   console.log(gameGrid)
   }
@@ -68,7 +74,7 @@ function updategameBoard2(){
 function updategameBoard3(){
   cell3=document.getElementById("2")
   cell3.innerHTML=currentPlayer;
-  if(currentPlayer="X"){
+  if(currentPlayer==="X"){
     gameGrid.splice(2,1,1)
   console.log(gameGrid)
   }
@@ -81,7 +87,7 @@ function updategameBoard3(){
 function updategameBoard4(){
   cell4=document.getElementById("3")
   cell4.innerHTML=currentPlayer;
-  if(currentPlayer="X"){
+  if(currentPlayer==="X"){
     gameGrid.splice(3,1,1)
   console.log(gameGrid)
   }
@@ -94,7 +100,7 @@ function updategameBoard4(){
 function updategameBoard5(){
   cell5=document.getElementById("4")
   cell5.innerHTML=currentPlayer;
-  if(currentPlayer="X"){
+  if(currentPlayer==="X"){
     gameGrid.splice(4,1,1)
   console.log(gameGrid)
   }
@@ -107,7 +113,7 @@ function updategameBoard5(){
 function updategameBoard6(){
   cell6=document.getElementById("5")
   cell6.innerHTML=currentPlayer;
-  if(currentPlayer="X"){
+  if(currentPlayer==="X"){
     gameGrid.splice(5,1,1)
   console.log(gameGrid)
   }
@@ -133,7 +139,7 @@ function updategameBoard7(){
 function updategameBoard8(){
   cell8=document.getElementById("7")
   cell8.innerHTML=currentPlayer;
-  if(currentPlayer="X"){
+  if(currentPlayer==="X"){
     gameGrid.splice(7,1,1)
     console.log(gameGrid)
   }
@@ -146,7 +152,7 @@ function updategameBoard8(){
 function updategameBoard9(){
   cell1=document.getElementById("8")
   cell1.innerHTML=currentPlayer;
-  if(currentPlayer="X"){
+  if(currentPlayer==="X"){
     gameGrid.splice(8,1,1)
     console.log(gameGrid)
   }
@@ -166,7 +172,3 @@ function checkWinner1(){
   }
 }
 
-function changePlayer(){
-  currentPlayer=(currentPlayer=="X")?"O":"X";
-  console.log("player changed")
-}
