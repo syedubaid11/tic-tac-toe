@@ -21,6 +21,12 @@ let gameGrid=[
   [0,0,0]
 ]
 
+let gameGrid2=[
+  [0,0,0],
+  [0,0,0],
+  [0,0,0]
+]
+
 let gameboard={
   grid:gameGrid
 }
@@ -33,16 +39,29 @@ document.querySelectorAll("cell")
 function updategameBoard1(){
   cell1=document.getElementById("0")
   cell1.innerHTML=currentPlayer;
-  gameGrid.splice(0,0,currentPlayer)
+  if(currentPlayer="X"){
+    gameGrid.splice(0,0,0)
   console.log(gameGrid)
-}
+  }
+  else{
+    gameGrid2.splice(0,0,1)
+    console.log(gameGrid2)
+  }  
+  }
+
+  
 function updategameBoard2(){
   cell2=document.getElementById("1")
   cell2.innerHTML=currentPlayer;
-  gameGrid.splice(1,0,currentPlayer)
+  if(currentPlayer="X"){
+    gameGrid.splice(1,0,1)
   console.log(gameGrid)
-
-}
+  }
+  else{
+    gameGrid2.splice(1,0,0)
+    console.log(gameGrid2)
+  } 
+  }
 function updategameBoard3(){
   cell3=document.getElementById("2")
   cell3.innerHTML=currentPlayer;
