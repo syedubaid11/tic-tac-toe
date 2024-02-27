@@ -3,18 +3,6 @@ let winner=null
 let tie=false
 let gamedraw=false
 
-
-
-const winCells=[
-  [0,1,2],
-  [3,4,5],
-  [6,7,8],
-  [0,3,6],
-  [1,4,7],
-  [2,5,8],
-  [0,4,8],
-  [2,4,6]
-]
 let gameGrid=[
   [0,0,0],
   [0,0,0],
@@ -53,7 +41,7 @@ function updategameBoard1(){
     console.log(gameGrid)
   }
   else{
-    gameGrid2.
+    gameGrid2[0][0]="O"
     console.log(gameGrid2)
   }  
   }
@@ -67,7 +55,7 @@ function updategameBoard2(){
   console.log(gameGrid)
   }
   else{
-    gameGrid2.splice(1,1,0)
+    gameGrid2[0][1]="O"
     console.log(gameGrid2)
   } 
   }
@@ -75,11 +63,11 @@ function updategameBoard3(){
   cell3=document.getElementById("2")
   cell3.innerHTML=currentPlayer;
   if(currentPlayer==="X"){
-    gameGrid.splice(2,1,1)
+    gameGrid[0][3]="X"
   console.log(gameGrid)
   }
   else{
-    gameGrid2.splice(2,1,0)
+    gameGrid2[0][3]="O"
     console.log(gameGrid2)
   } 
   console.log(gameGrid)
@@ -88,11 +76,11 @@ function updategameBoard4(){
   cell4=document.getElementById("3")
   cell4.innerHTML=currentPlayer;
   if(currentPlayer==="X"){
-    gameGrid.splice(3,1,1)
+    gameGrid[1][0]="X"
   console.log(gameGrid)
   }
   else{
-    gameGrid2.splice(3,1,0)
+    gameGrid2[1][0]="O"
     console.log(gameGrid2)
   } 
 
@@ -101,11 +89,11 @@ function updategameBoard5(){
   cell5=document.getElementById("4")
   cell5.innerHTML=currentPlayer;
   if(currentPlayer==="X"){
-    gameGrid.splice(4,1,1)
+    gameGrid[1][1]="X"
   console.log(gameGrid)
   }
   else{
-    gameGrid2.splice(4,1,0)
+    gameGrid2[1][1]="O"
     console.log(gameGrid2)
   } 
 
@@ -114,11 +102,11 @@ function updategameBoard6(){
   cell6=document.getElementById("5")
   cell6.innerHTML=currentPlayer;
   if(currentPlayer==="X"){
-    gameGrid.splice(5,1,1)
+    gameGrid[1][2]="X"
   console.log(gameGrid)
   }
   else{
-    gameGrid2.splice(5,1,0)
+    gameGrid2[1][2]="O"
     console.log(gameGrid2)
   } 
 
@@ -127,11 +115,11 @@ function updategameBoard7(){
   cell7=document.getElementById("6")
   cell7.innerHTML=currentPlayer;
   if(currentPlayer="X"){
-    gameGrid.splice(6,1,1)
+    gameGrid[2][0]="X"
   console.log(gameGrid)
   }
   else{
-    gameGrid2.splice(6,1,0)
+    gameGrid2[2][0]="O"
     console.log(gameGrid2)
   } 
 
@@ -140,11 +128,11 @@ function updategameBoard8(){
   cell8=document.getElementById("7")
   cell8.innerHTML=currentPlayer;
   if(currentPlayer==="X"){
-    gameGrid.splice(7,1,1)
+    gameGrid[2][1]="X"
     console.log(gameGrid)
   }
   else{
-    gameGrid2.splice(7,1,0)
+    gameGrid2[2][1]="O"
     console.log(gameGrid2)
   } 
 
@@ -153,30 +141,36 @@ function updategameBoard9(){
   cell1=document.getElementById("8")
   cell1.innerHTML=currentPlayer;
   if(currentPlayer==="X"){
-    gameGrid.splice(8,1,1)
+    gameGrid[2][2]="X"
     console.log(gameGrid)
   }
   else{
-    gameGrid2.splice(8,1,0)
+    gameGrid2[2][2]="O"
     console.log(gameGrid2)
   } 
 
 }
 
 function checkWin(){
-  if(board[0].textContent === "X" &&
-    board[1].textContent === "X" &&
-    board[2].textContent === "X"
-  ) { alert("Win")}
+  if(gameGrid[0][0].textContent === "X" &&
+    gameGrid[0][1].textContent === "X" &&
+    gameGrid[0][2].textContent === "X"
+  ) { console.log("win")}
   else if (
-    board[3].textContent === "X" &&
-    board[4].textContent === "X" &&
-    board[5].textContent === "X"
-  ) { alert("Win")}
+    gameGrid[1][0].textContent === "X" &&
+    gameGrid[1][1].textContent === "X" &&
+    gameGrid[1][2].textContent === "X"
+  ) { console.log("Win")}
    else if (
-    board[6].textContent === "X" &&
-    board[7].textContent === "X" &&
-    board[8].textContent === "X"
-  ) { alert("Win")}
-
+    gameGrid[2][0].textContent === "X" &&
+    gameGrid[2][1].textContent === "X" &&
+    gameGrid[2][2].textContent === "X"
+  ) { console.log("Win")}
+  else if(
+    gameGrid[0][1].textContent==="X"&&
+    gameGrid[1][1].textContent==="X"&&
+    gameGrid[2][2].textContent==="X"
+  ){console.log("Win")}
 }
+
+checkWin()
