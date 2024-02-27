@@ -49,11 +49,11 @@ function updategameBoard1(){
   cell1=document.getElementById("0")
   cell1.innerHTML=currentPlayer;
   if(currentPlayer==="X"){
-    gameGrid.splice(0,1,1)
+    gameGrid[0][0]="X"
     console.log(gameGrid)
   }
   else{
-    gameGrid2.splice(0,1,0)
+    gameGrid2.
     console.log(gameGrid2)
   }  
   }
@@ -63,7 +63,7 @@ function updategameBoard2(){
   cell2=document.getElementById("1")
   cell2.innerHTML=currentPlayer;
   if(currentPlayer==="X"){
-    gameGrid.splice(1,1,1)
+  gameGrid[0][1]="X"
   console.log(gameGrid)
   }
   else{
@@ -163,12 +163,20 @@ function updategameBoard9(){
 
 }
 
+function checkWin(){
+  if(board[0].textContent === "X" &&
+    board[1].textContent === "X" &&
+    board[2].textContent === "X"
+  ) { alert("Win")}
+  else if (
+    board[3].textContent === "X" &&
+    board[4].textContent === "X" &&
+    board[5].textContent === "X"
+  ) { alert("Win")}
+   else if (
+    board[6].textContent === "X" &&
+    board[7].textContent === "X" &&
+    board[8].textContent === "X"
+  ) { alert("Win")}
 
-
-
-function checkWinner1(){
-  for(i=0;i<gameGrid.length;i++){
-    console.log(gameGrid[i])
-  }
 }
-

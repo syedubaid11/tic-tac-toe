@@ -9,16 +9,17 @@
 <body>
     <h1>Tic Tac Toe</h1>
     <div id="container">
-        <div id="0" class="cell" onclick=updategameBoard1();changePlayer()></div>
-        <div id="1" class="cell"onclick=updategameBoard2();changePlayer()></div>
-        <div id="2" class="cell"onclick=updategameBoard3();changePlayer()></div>
-        <div id="3" class="cell"onclick=updategameBoard4();changePlayer()></div>
-        <div id="4" class="cell"onclick=updategameBoard5();changePlayer()></div>
-        <div id="5" class="cell"onclick=updategameBoard6();changePlayer()></div>
-        <div id="6" class="cell"onclick=updategameBoard7();changePlayer()></div>
-        <div id="7" class="cell"onclick=updategameBoard8();changePlayer()></div>
-        <div id="8" class="cell"onclick=updategameBoard9();changePlayer()></div>
+        <div id="0" class="cell" onclick=updategameBoard1();changePlayer();checkWinner1()></div>
+        <div id="1" class="cell"onclick=updategameBoard2();changePlayer();checkWinner1()></div>
+        <div id="2" class="cell"onclick=updategameBoard3();changePlayer();checkWinner1()></div>
+        <div id="3" class="cell"onclick=updategameBoard4();changePlayer();checkWinner1()></div>
+        <div id="4" class="cell"onclick=updategameBoard5();changePlayer();checkWinner1()></div>
+        <div id="5" class="cell"onclick=updategameBoard6();changePlayer();checkWinner1()></div>
+        <div id="6" class="cell"onclick=updategameBoard7();changePlayer();checkWinner1()></div>
+        <div id="7" class="cell"onclick=updategameBoard8();changePlayer();checkWinner1()></div>
+        <div id="8" class="cell"onclick=updategameBoard9();changePlayer();checkWinner1()></div>
     </div>
+    <div id="winnerstatus"><p></p></div>
     <script src="script.js"></script>
 </body>
 </html>
